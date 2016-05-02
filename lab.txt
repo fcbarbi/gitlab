@@ -3,3 +3,4 @@ teste do git por fcb 02 maio 2016 as 22:06
 Linha 3 alterada pelo site 
 Linha 4 alterada no desktop.
 Teste de merging da linha 3 (site) com 4 (desktop).
+terminado o processo as 23:10. Atualizando o site. 
