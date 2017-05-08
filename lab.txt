@@ -58,6 +58,8 @@ colnames(articles)
 [^sourcelist]: Elaborate lists of APIs can be obtained on [Wikipedia](https://en.wikipedia.org/wiki/List_of_news_media_APIs) and   [programmableweb](https://www.programmableweb.com/).
 
 [^NYT]: The [New York Times Developer Network](https://developer.nytimes.com/)
+http://developer.nytimes.com/docs/article_search_api
+http://developer.nytimes.com/docs/times_newswire_api
 https://cran.r-project.org/web/packages/jsonlite/vignettes/json-apis.html
 
 [^FT]: The [Financial Times Developer Programme](https://developer.ft.com/) 
@@ -73,11 +75,32 @@ Get live headlines, images, and other article metadata from The Wall Street Jour
 
 [^HEARST]: http://developer.hearst.com/
 
+[^WPOST]: http://apiportal.washingtonpost.com/api/trove
+
+[^ZEIT]: http://developer.zeit.de/index/
+[^HANDELSBLATT]: https://newsapi.org/handelsblatt-api
+
+[^FAZ]: http://www.faz.net/faz-net-services/widgets/rss-feed-nichts-verpassen-mit-den-rss-angeboten-von-faz-net-11124617.html
+
+[^TIME]: https://newsapi.org/time-api
+
+[^ECONOMIST]: https://newsapi.org/the-economist-api
+
+[^GUARDIAN]: https://newsapi.org/the-guardian-uk-api
+http://www.theguardian.com/open-platform
+
+[^BLOOMBERG]: https://newsapi.org/bloomberg-api
+
+[^REUTERS]: [Reuters](https://customers.reuters.com/developer/apis_tech.aspx/)
+
 [^NEWSCORP]: URL: http://s.news.com.au/newsapidocs
 
-[^PUBLIC]: https://support.pmp.io/docs#the-pmp-api
-http://publicmediaplatform.org/
+[^PUBLIC]: https://support.pmp.io/docs#the-pmp-api and http://publicmediaplatform.org/
 
 [^DATAAU]: https://data.sa.gov.au/data/dataset/news-corp-australia-journalism-api-pilot
 
 [^NEWSAPI]: https://newsapi.org/sources
+
+https://www.documentcloud.org/help/api#api-wrappers
+
+
