@@ -1,6 +1,83 @@
-lab.txt
-teste do git por fcb 02 maio 2016 as 22:06
-Linha 3 alterada pelo site 
-Linha 4 alterada no desktop.
-Teste de merging da linha 3 (site) com 4 (desktop).
-terminado o processo as 23:10. Atualizando o site. 
+---------------------
+title: newsminer.rmd
+author: FCBarbi
+default: html
+---------------------
+
+## The NewsMiner R Package 
+
+### Introduction 
+
+The NewsMiner R package was developed to automate the collection of journalistic[^newsmedia], textual data thru published APIs. The user must get a personalized key from each of the services that she wants to mine. The routines in this package simply speed the collection process once the key is provided. The peculiarities of each API provider are taken into account to bring the results to a common format stored in a data frame. The API's were compiled from different lists[^sourcelist].
+
+Usage example:
+
+´´´r
+ install.packages("newsminer")
+ require(media)
+ 
+ medias <- mediaSources()
+ View(medias)
+ "New York Times","mediaNYT( key, db, query )"
+ "Financial Times","mediaFT( key, db, query )" 
+ "BBC","mediaBBC()"
+ "Reuters"
+ "AP"
+ "WSJ"
+ ""
+ ...
+´´´
+
+´´´r
+ nytkey <- "c2fede7bd9aea57c898f538e5ec0a1ee:6:68700045"
+ mediaNYT( nytkey, "article" , c("obama","socialism") )
+´´´
+
+´´´r
+#search for articles
+article_key <- "&api-key=c2fede7bd9aea57c898f538e5ec0a1ee:6:68700045"
+url <- "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=obamacare+socialism"
+req <- fromJSON(paste0(url, article_key))
+articles <- req$response$docs
+colnames(articles)
+´´´
+
+´´´r
+ mediaFT( key=keyft, db=, query='' )
+´´´
+
+´´´r
+ mediaBBC()
+´´´
+
+
+### References
+
+[^newsmedia]: The [Wikipedia](https://en.wikipedia.org/wiki/News_media) definition for the news media or news industry "are forms of mass media that focus on delivering news to the general public or a target public."
+
+[^sourcelist]: Elaborate lists of APIs can be obtained on [Wikipedia](https://en.wikipedia.org/wiki/List_of_news_media_APIs) and   [programmableweb](https://www.programmableweb.com/).
+
+[^NYT]: The [New York Times Developer Network](https://developer.nytimes.com/)
+https://cran.r-project.org/web/packages/jsonlite/vignettes/json-apis.html
+
+[^FT]: The [Financial Times Developer Programme](https://developer.ft.com/) 
+
+[^BBC]: [Documentation for BBC News Labs APIs & #newsHACK events](http://docs.bbcnewslabs.co.uk/CANDY.html)
+
+[^APRESS]: [Associated Press Breaking News API] (https://developer.ap.org/ap-breaking-news-api)
+
+[^HUFF]: [Pollster's API](http://elections.huffingtonpost.com/pollster/api/v2) provides the data underlying this website, including data from tens of thousands of polls our editors have entered. 
+
+[^WSJ]: The [Wall Street Journal API] https://newsapi.org/the-wall-street-journal-api
+Get live headlines, images, and other article metadata from The Wall Street Journal with our free JSON API.
+
+[^HEARST]: http://developer.hearst.com/
+
+[^NEWSCORP]: URL: http://s.news.com.au/newsapidocs
+
+[^PUBLIC]: https://support.pmp.io/docs#the-pmp-api
+http://publicmediaplatform.org/
+
+[^DATAAU]: https://data.sa.gov.au/data/dataset/news-corp-australia-journalism-api-pilot
+
+[^NEWSAPI]: https://newsapi.org/sources
